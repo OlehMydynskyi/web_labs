@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: PTSans, Verdana, sans-serif;
+}
+
+.library {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-gap: 1em;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1em;
+    margin: 1em;
+}
+
+.slides {
+    border-radius: 5px;    
+}
+
+.slides div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    padding: 10px;
+    
+}
+
+.slides h4 {
+    font-weight: normal;
+    color: darkslategray;
+}
+
+.slides p {
+    color: darkslategray;
+    padding-left: 10px;
+    
+}
+
+img {
+    height: 100px;
+}
+
+.menu {
+    border-radius: 5px;
+    padding: 10px 10px 0 10px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    
+}
+
+.menu p {
+    height: 40px;
+    background-color: lavender;
+    margin: 2em;
+    border-radius: 5px;
+    text-align: center;
+    left: 50%;
+    color: darkslategray;
+    cursor: pointer;
+}
+
+h5 {
+    color: darkslategray;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: darkslategray;
+    font-weight: normal;
+}
+
+input[type=range] {
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#cake:checked ~ .library .notcake
+{
+    display: none;
+}
+
+@media (min-width: 730px) and (max-width: 1200px) {
+    .main {
+        display: inline;
+    }
+    .menu h5,
+    .menu input{
+        display: none;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0;
+    }
+
+    .menu p{
+        margin: 1em;
+        height: 50px;
+    }
+
+    .library {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .slides {
+        background-color: whitesmoke;
+        border: 1px solid silver;
+    }
+
+    .slides div {
+        display: inline;
+    }
+
+    .slides hr,
+    .slides p {
+        display: none;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        display: block;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .library {
+        grid-template-rows: auto;
+    }
+
+    h4 {
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 1201px)
+{
+    .menu{
+        background-color: whitesmoke;
+        border: 1px solid silver;
+    }
+
+    .slides {
+        background-color: whitesmoke;
+        border: 1px solid silver;
+    }
+}
+
+@media (max-width: 730px)
+{
+    .main {
+        display: inline;
+    }
+
+    .menu h5,
+    .menu input{
+        display: none;
+    }
+
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+
+    .menu p{
+        margin: 1em;
+        height: 50px;
+    }
+
+    .library {
+        display: inline;
+    }
+
+    .slides h4,
+    .slides hr,
+    .slides p {
+        display: none;
+    }
+
+    img {
+        width: 200%;
+        height: auto;
+        border-radius: 5px;
+    }
+}

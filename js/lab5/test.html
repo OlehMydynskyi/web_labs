@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Тест</h1>
+    <div id="quiz"></div>
+    <script>
+        const myQuestions = [
+            {
+                question: "Якою командою вибрати елемент по id?",
+                answers: {
+                    a: "getElementById()",
+                    b: "selectElementById()",
+                    c: "findElementById()",
+                    d: "queryById()"
+                },
+                correctAnswer: "a"
+            },
+            {
+                question: "Якою командою вибрати елементи по tagname?",
+                answers: {
+                    a: "findElementsByTagName();",
+                    b: "selectElementsByTagName();",
+                    c: "getElementsByTagName()",
+                    d: "queryByTagName();"
+                },
+                correctAnswer: "c"
+            },
+            {
+                question: "Якою командою вибрати елементи по css селектору?",
+                answers: {
+                    a: "selectElements();",
+                    b: "findElementsBySelector();",
+                    c: "getElementsBySelector();",
+                    d: "querySelectorAll();"
+                },
+                correctAnswer: "d"
+            }
+        ];
+
+        function buildQuiz(){
+            var parent = document.getElementById("quiz");
+
+            for (var i = 0; i < myQuestions.length; i++)
+            {
+                var h4 = document.createElement('h4');
+                h4.innerHTML = myQuestions[i].question;
+                parent.appendChild(h4);
+
+                var _name = "question" + i;
+
+                var input = document.createElement('input');
+                input.setAttribute('type', 'radio');
+                input.setAttribute('name', _name);
+                var text = "a: " + myQuestions[i].answers.a ; 
+                parent.appendChild(input);
+                input.after(text);
+                var br = document.createElement('br');
+                parent.appendChild(br);
+
+                var input = document.createElement('input');
+                input.setAttribute('type', 'radio');
+                input.setAttribute('name', _name);
+                var text = "b: " + myQuestions[i].answers.b ; 
+                parent.appendChild(input);
+                input.after(text);
+                var br = document.createElement('br');
+                parent.appendChild(br);
+
+                var input = document.createElement('input');
+                input.setAttribute('type', 'radio');
+                input.setAttribute('name', _name);
+                var text = "c: " + myQuestions[i].answers.c ; 
+                parent.appendChild(input);
+                input.after(text);
+                var br = document.createElement('br');
+                parent.appendChild(br);
+
+                var input = document.createElement('input');
+                input.setAttribute('type', 'radio');
+                input.setAttribute('name', _name);
+                var text = "d: " + myQuestions[i].answers.d ; 
+                parent.appendChild(input);
+                input.after(text);
+            }
+        }
+
+        let quiz = buildQuiz();
+        var id = document.getElementById("quiz");
+        document.id.appendChild(buildQuiz());
+    </script>
+
+</body>

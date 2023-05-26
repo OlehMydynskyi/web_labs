@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function totalCost(braces) { 
+            var obj = [];
+
+	        for (var i = 0; i < braces.length; i++)
+	        {
+	            if (braces[i] == '(' || braces[i] == '{' || braces[i] == '<' || braces[i] == '[') obj.push(braces[i]);
+                else if (braces[i] == ')')
+                {
+                    if (obj[obj.length - 1] == '(') obj.pop();
+                    else return false;
+                }
+                else if (braces[i] == '}')
+                {
+                    if (obj[obj.length - 1] == '{') obj.pop();
+                    else return false;
+                }
+                else if (braces[i] == ']')
+                {
+                    if (obj[obj.length - 1] == '[') obj.pop();
+                    else return false;
+                }
+                else if (braces[i] == '>')
+                {
+                    if (obj[obj.length - 1] == '<') obj.pop();
+                    else return false;
+                }
+	        }
+            
+            if (obj.length == 0) return true;   
+            else return false; 
+        }
+
+        var str = "({";
+
+        document.write(totalCost(str));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

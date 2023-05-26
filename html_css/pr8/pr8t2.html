@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>t2</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px auto;
+            grid-template-rows: 50px 50px 200px;
+            grid-gap: 3px;
+        }
+
+        .container > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #ffeead;
+        }
+
+        html, body {
+            margin: 10px;
+        }
+
+        .container > div:nth-child(1n) {
+            background-color: lightgreen;	
+        }
+
+        .container > div:nth-child(3n) {
+            background-color: lightseagreen;
+        }
+
+        .container > div:nth-child(2n) {
+            background-color: orange;
+        }
+
+        .container > div:nth-child(4n) {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

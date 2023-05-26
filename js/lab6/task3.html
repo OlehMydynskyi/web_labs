@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>l6t3</title>
+    <style>
+        input {
+            width: 60px;
+            height: 60px;
+            background-color: gray;
+            color: white;
+            font-size: 30px;
+        }
+
+        #panel {
+            width: 200px;
+            height: 60px;
+            background-color: gray;
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        #button {
+            width: 200px;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="panel"></div>
+        <div id="button">
+            <input type="button" value="1" onclick="out('1')" onmouseover="inFocus('1')">
+            <input type="button" value="2" onclick="out('2')" onmouseover="inFocus('2')">
+            <input type="button" value="3" onclick="out('3')" onmouseover="inFocus('3')">
+            <input type="button" value="4" onclick="out('4')" onmouseover="inFocus('4')">
+            <input type="button" value="5" onclick="out('5')" onmouseover="inFocus('5')">
+            <input type="button" value="6" onclick="out('6')" onmouseover="inFocus('6')">
+            <input type="button" value="7" onclick="out('7')" onmouseover="inFocus('7')">
+            <input type="button" value="8" onclick="out('8')" onmouseover="inFocus('8')">
+            <input type="button" value="9" onclick="out('9')" onmouseover="inFocus('9')">
+            <input type="button" value="C" onclick="remove()" onmouseover="inFocus('C')">
+            <input type="button" value="0" onclick="out('0')" onmouseover="inFocus('0')">
+            <input type="button" value="S" onclick="_list()" onmouseover="inFocus('S')">
+        </div>
+        
+    </div>
+    <p id="focus"></p>
+    <script src="task3.js"></script>
+</body>
+</html>

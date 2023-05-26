@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function rotate(nums, k){
+            var t;
+    
+	        while (k > 0)
+	        {
+	            t = nums[nums.length - 1];
+	            for (var i = nums.length - 2; i >= 0; i--)
+	            {
+	                nums[i + 1] = nums[i];
+                }
+                nums [0] = t;
+                k--;
+	        }
+            
+        }
+
+        let arr = [1, 2, 3, 4, 5]
+        rotate(arr, 3);
+
+        for (var i = 0; i < arr.length; i++)
+        {
+            document.write(arr[i])
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+    	

@@ -1,0 +1,168 @@
+body {
+    outline: 2px solid silver;
+    margin: 10px;
+    font-family: PTSans, Verdana, sans-serif;
+}
+
+.items label {
+    font-size: 25px;
+    padding: 15px;
+    color: silver;
+    cursor: pointer;
+}
+
+.items input:checked + label {
+    color: dodgerblue;
+}
+
+input[name=view]:hover + label {
+    text-decoration: underline;
+}
+
+.items #bar:checked ~ .item{
+    height: 600px;
+    width: 400px;
+    outline: 2px solid silver;
+    margin: 47px;
+    display: inline-block;
+}
+
+.item:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.items #list:checked ~ .item{
+    height: 250px;
+    width: 1450px;
+    outline: 2px solid silver;
+    margin: 30px auto;
+}
+
+.item {
+    line-height: 1.1;
+}
+
+#bar:checked ~ .item .img {
+    margin: 45px;
+    text-align: center;
+    height: 200px;
+    width: auto;
+}
+
+#list:checked ~ .item .img img{
+    height: 150px;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 70px;
+    float: left;
+}
+
+.item img:hover {
+    border: silver solid 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#bar:checked ~ .item h3 {
+    font-weight: normal;
+    margin-left: 20px;
+    color: dodgerblue;
+    text-decoration: underline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+} 
+
+
+#list:checked ~ .item h3 {
+    font-weight: normal;
+    margin-left: 400px;
+    color: dodgerblue;
+    text-decoration: underline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 400px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+.item h3:hover {
+    color: red !important;
+}
+
+
+
+#bar:checked ~ .item .section {
+    color: silver;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#list:checked ~ .item .section {
+    color: silver;
+    font-size: 15px;
+    margin-left: 400px;
+}
+
+.section:hover {
+    color: red !important;
+    cursor: pointer;
+}
+
+.stars label::after {
+    content: '\2606';
+    color: orange;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.stars input:hover ~ label::after,
+.stars input:checked ~ label::after {
+    content: '\2605';
+}
+
+#bar:checked ~ .item .stars{
+    direction: rtl;
+    text-align: left;
+}
+
+#list:checked ~ .item .stars{
+    direction: rtl;
+    text-align: left;
+    margin-left: 385px;
+
+}
+
+input {
+    display: none;
+}
+
+#bar:checked ~ .item .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: tomato;
+    margin-left: 20px;
+}
+#list:checked ~ .item .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: tomato;
+    margin-left: 400px;
+
+}
+
+#bar:checked ~ .item .description {
+    margin-left: 20px;
+    height: 110px;
+    overflow: hidden;
+} 
+
+#list:checked ~ .item .description {
+    height: 110px;
+    overflow: hidden;
+    float: right;
+    width: 500px;
+    margin-top: -155px;
+}

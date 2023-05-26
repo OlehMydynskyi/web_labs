@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style>
+        /* Визначає стилі для таблиць */
+        table { border-collapse: collapse; }
+        td, th { border: 1px solid black; padding: 3px 8px; }
+        th { text-align: left; }
+    </style>
+    <div id="elem"></div>
+    <script>
+        var RIVERS = [
+        {назва: "Дніпро", впадає: "Чорне море", довжина: 2201},
+        {назва: "Дністер", впадає: "Чорне море", довжина: 1362},
+        {назва: "Південний Буг", впадає: "Чорне море", довжина: 806},
+        {назва: "Сіверський Донець", впадає: "Дон", довжина: 1053},
+        {назва: "Горинь", впадає: "Прип'ять", довжина: 659}
+        ];
+        
+        function buildTable(data) {
+            var parent = document.getElementsByTagName("body");
+            var table = document.createElement('table');
+            var tr = document.createElement('tr');
+            
+            var th = document.createElement('th');
+            th.innerHTML = "Назва";
+            tr.appendChild(th);
+
+            var th = document.createElement('th');
+            th.innerHTML = "Впадає";
+            tr.appendChild(th);
+            
+            var th = document.createElement('th');
+            th.innerHTML = "Довжина";
+            tr.appendChild(th);
+
+            table.appendChild(tr);
+
+            for (var i = 0; i < data.length; i++)
+            {
+                var tr = document.createElement('tr');
+
+                var td = document.createElement('td');
+                td.innerHTML = data[i].назва;
+                tr.appendChild(td);
+
+                var td = document.createElement('td');
+                td.innerHTML = data[i].впадає;
+                tr.appendChild(td);
+            
+                var td = document.createElement('td');
+                td.innerHTML = data[i].довжина;
+                td.style.textAlign = 'right';
+                tr.appendChild(td);
+
+                table.appendChild(tr);
+            }
+            
+            parent[0].appendChild(table);
+        }
+        document.body.appendChild(buildTable(RIVERS));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

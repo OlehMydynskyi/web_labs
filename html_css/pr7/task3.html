@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            min-height: 100vh;
+        }
+
+        .wrapper > * {
+            margin:  10px;
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 10px;
+            flex: 1;
+        }
+
+        .wrapper header,
+        .wrapper footer {
+            flex:  0 1 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>the header the header the header the header the header the header the header the header the header the header the header the header the header</header>
+        <aside>first column first column first column first column first columnfirst columnfirst columnfirst column first column first column first columnfirst columnfirst columnv first column</aside>
+        <main>the main content should be here the main content should be here the main content should be here the main content should be here the main content should be here the main content should be here</main>
+        <section>this is the third column this is the third column this is the third column this is the third column this is the third column</section>
+        <footer>the footer the footer the footer the footer the footer the footer the footerthe footerthe footer the footer</footer>
+    </div>
+</body>
+</html>

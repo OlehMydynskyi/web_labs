@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-10</title>
+    <script>
+        var a, a1, a2, a3;
+        document.write("<b>" + "8.Сума і добуток цифр" + "</b>" + "<br>");
+        a = window.prompt("Введіть трицефрове число");
+        a = parseFloat(a);
+        document.write("Your number: " + a + "<br>");
+        a1 = Math.floor(a / 100);
+        a2 = Math.floor(a / 10 - a1 * 10);
+        a3 = Math.floor(a - a1 * 100 - a2 * 10);
+        document.write("Sum: " + (a1 + a2 + a3) + "<br>");
+        document.write("Mul: " + (a1 * a2 * a3) + "<br>" + "<br>");
+        
+        var n, h, m;
+        document.write("<b>" + "9.Годинник" + "</b>" + "<br>");
+        n = window.prompt("Введіть кількість хвилин");
+        n = parseFloat(n);
+        if (n < 1440)
+        {
+            h = Math.floor(n / 60);
+            m = n - h * 60;
+        }
+        else if (n > 1440)
+        {
+            h = Math.floor(n / 60);
+            m = n - h * 60;
+            h -= 24;
+        }
+        else 
+        {
+            h = 0;
+            m = 0;
+        }
+
+        if (h < 10)
+        {
+            document.write("0" + h + ":")
+        }
+        else{
+            document.write(h + ":")
+        }
+
+        if (m < 10)
+        {
+            document.write("0" + m + "<br>")
+        }
+        else 
+        {
+            document.write(m + "<br>")
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

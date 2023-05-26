@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pr4</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="radio" name="filter" id="first"> Перша половина дня<br>
+    <input type="radio" name="filter" id="second"> Друга половина дня<br>
+    <input type="radio" name="filter" id="weekday"> Будні<br>
+    <input type="radio" name="filter" id="weekend"> Вихідні<br>
+    <input type="radio" name="filter" id="sc"> Друга категорія<br>
+    <input type="radio" name="filter" id="fc"> Перша категорія<br>
+    <input type="radio" name="filter" id="hc"> Вища категорія<br>
+    <input type="radio" name="filter" id="none"> Прибрати всі фільтри<br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Спеціальність</th>
+                <th>ПІБ</th>
+                <th>Рівень (категорія) фахівця</th>
+                <th>Номер кабінету</th>
+                <th>Години прийому</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="weekday first sс">
+                <td>Невролог</td>
+                <td>Бушинський Григорій Дмитрович</td>
+                <td>Друга</td>
+                <td>254</td>
+                <td>Пн-Пт 8:00-13:00</td>
+            </tr>
+            <tr class="weekday second sс"> 
+                <td>Дерматолог</td>
+                <td>Маткевич Олег Валерійович</td>
+                <td>Друга</td>
+                <td>625</td>
+                <td>Пн-Пт 13:00-21:00</td>
+            </tr>
+            <tr class="weekday first fс">
+                <td>Кардіолог</td>
+                <td>Бобровський Олександр Ярославович</td>
+                <td>Перша</td>
+                <td>635</td>
+                <td>Пн-Пт 8:00-13:00</td>
+            </tr>
+            <tr class="weekend first sc">
+                <td>Логопед</td>
+                <td>Гродецкий Віктор Русланович</td>
+                <td>Друга</td>
+                <td>152</td>
+                <td>Пт-Нд 8:00-13:00</td>
+            </tr>
+            <tr class="weekday first fc">
+                <td>Ортопед</td>
+                <td>Маткевич Євген Львович</td>
+                <td>Перша</td>
+                <td>421</td>
+                <td>Пн-Пт 8:00-13:00</td>
+            </tr>
+            <tr class="weekday second sc">
+                <td>Пластичний хірург</td>
+                <td>Василенко В'ячеслав Олександрович</td>
+                <td>Друга</td>
+                <td>523</td>
+                <td>Пн-Пт 13:00-21:00</td>
+            </tr>
+            <tr class="weekend first hc">
+                <td>Психіатр</td>
+                <td>Попович Анатолій Микитович</td>
+                <td>Вища</td>
+                <td>353</td>
+                <td>Пт-Нд 8:00-13:00</td>
+            </tr>
+            <tr class="weekday first sc">
+                <td>Психотерапевт</td>
+                <td>Остроградський Андрій Ілліч</td>
+                <td>Друга</td>
+                <td>524</td>
+                <td>Пн-Пт 8:00-13:00</td>
+            </tr>
+            <tr class="weekday second fc">
+                <td>Ревматолог</td>
+                <td>Якимович Михайло Віталійович</td>
+                <td>Перша</td>
+                <td>414</td>
+                <td>Пн-Пт 13:00-21:00</td>
+            </tr>
+            <tr class="weekend first sc">
+                <td>Рентгенолог</td>
+                <td>Якушко Олександр Сергійович</td>
+                <td>Друга</td>
+                <td>404</td>
+                <td>Пт-Нд 8:00-13:00</td>
+            </tr>
+            <tr class="weekend first sc">
+                <td>Стоматолог</td>
+                <td>Волинський Геннадій Семенович</td>
+                <td>Друга</td>
+                <td>123</td>
+                <td>Пт-Нд 8:00-13:00</td>
+            </tr>
+            <tr class="weekday second fc">
+                <td>Терапевт</td>
+                <td>Рябченко Євген Семенович</td>
+                <td>Перша</td>
+                <td>485</td>
+                <td>Пн-Пт 13:00-21:00</td>
+            </tr>
+            <tr class="weekend second hc">
+                <td>Фельдшер</td>
+                <td>Гриневич Антон Федорович</td>
+                <td>Вища</td>
+                <td>163</td>
+                <td>Пт-Нд 13:00-21:00</td>
+            </tr>
+            <tr class="weekday second hc">
+                <td>Хірург</td>
+                <td>Волинський Геннадій Семенович</td>
+                <td>Вища</td>
+                <td>625</td>
+                <td>Пн-Пт 13:00-21:00</td>
+            </tr>
+            <tr class="weekend first fc">
+                <td>Уролог</td>
+                <td>Карголомскій В'ячеслав Сергійович</td>
+                <td>Перша</td>
+                <td>413</td>
+                <td>Пт-Нд 8:00-13:00</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <form aclion="">
+        
+        <input type="tel" id="tel" pattern="\+380\d{9}" placeholder="+380123456789" required>
+        <input type="email" id="email" required>
+        <input type="submit" id="button" value="Надіслати дані на телефон">
+        
+    </form>
+</body>
+</html>

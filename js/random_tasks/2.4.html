@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+    <script>
+        var a, b, c, x, D;
+
+        a = window.prompt("Введіть число a");
+        a = parseFloat(a);
+        b = window.prompt("Введіть число b");
+        b = parseFloat(b);
+        c = window.prompt("Введіть число c");
+        c = parseFloat(c);
+
+        if (a == 1)
+        {
+            document.write("x<sup>2</sup> " + " + " + b + "x " + " + " + c + " = 0" + "<br>");
+        }
+        else 
+        {
+            document.write(a + "x<sup>2</sup> " + " + " + b + "x " + " + " + c + " = 0" + "<br>");
+        }
+        
+
+        D = b * b - 4 * a * c;
+        document.write("D = " + D + "<br>");
+
+        if (D < 0)
+        {
+            document.write("Рівняння розв'язків не має." + "<br>");
+        }
+        else if (D > 0)
+        {
+            x = (-1 * b - Math.sqrt(D)) / (2 * a);
+            document.write("x<sub>1</sub> = " + x + "; ");
+            x = (-1 * b + Math.sqrt(D)) / 2 * a;
+            document.write("x<sub>2</sub> = " + x);
+        }
+        else 
+        {
+            x = (-1 * b) / (2 * a);
+            document.write("x = " + x);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

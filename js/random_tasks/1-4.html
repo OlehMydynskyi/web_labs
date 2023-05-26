@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1-4</title>
+    <script>
+        var a,b,h,S,c,sum,mul,avg;
+        document.write("<b>" + "1.Розрахунок площі трапеції" + "</b>" + "<br>");
+        a = window.prompt("Введіть значення сторони прямокутника a");
+        a = parseFloat(a);
+        b = window.prompt("Введіть значення сторони прямокутника b");
+        b = parseFloat(b);
+        S = a * b;
+        P = 2 * (a + b);
+        document.write("a=" + a + "<br>");
+        document.write("b=" + b + "<br>");
+        document.write("S=" + S + "<br>");
+        document.write("P=" + P + "<br>");
+
+        document.write("<br>");
+        document.write("<b>" + "2.Сума, добуток і середнє арифметичне трьох чисел" + "</b>" + "<br>");
+        a = window.prompt("Введіть перше число");
+        a = parseFloat(a);
+        b = window.prompt("Введіть друге число");
+        b = parseFloat(b);
+        c = window.prompt("Введіть третє число");
+        c = parseFloat(c);
+        sum = a + b + c;
+        mul = a * b * c;
+        avg = sum / 3;
+        document.write(a + "+" + b + "+"  + c + "=" + sum + "<br>");
+        document.write(a + "*" + b + "*"  + c + "=" + mul + "<br>");
+        document.write("(" + a + "+" + b + "+"  + c + ")" + "/3 =" + avg.toFixed(3) + "<br>");
+
+        document.write("<br>");
+        document.write("<b>" + "4." + "</b>" + "<br>");
+        a = window.prompt("Введіть число");
+        a = parseFloat(a);
+        document.write("The next number for the number " + a + " is "  + (a+1) + "." + "<br>");
+        document.write("The previous number for the number " + a + " is "  + (a - 1) + "." + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

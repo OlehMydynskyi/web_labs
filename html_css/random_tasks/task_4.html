@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>lab3_4</title>
+	<style>
+		span {
+			border-radius: 3px;
+			color: white;
+			padding: 5px;
+		}
+		.red {
+			background-color: red;
+		}
+		.green {
+			background-color: green;
+		}
+		.blue {
+			background-color: blue;
+		}
+
+		#red:not(:checked) ~ .red {
+			display: none;
+		}
+		#green:not(:checked) ~ .green {
+			display: none;
+		}
+		#blue:not(:checked) ~ .blue {
+			display: none;
+		}
+		label[for] {
+			text-decoration: underline;
+			cursor: pointer;
+			opacity: 0.3;
+		}
+		label[for="red"] {
+			color: red;
+			padding: 10px;
+		}
+		#red:checked ~ label[for="red"] {
+			opacity: 1;
+		}
+		#green:checked ~ label[for="green"] {
+			opacity: 1;
+		}
+		#blue:checked ~ label[for="blue"] {
+			opacity: 1;
+		}
+		label[for="green"] {
+			color: green;
+			padding: 10px;
+		}
+		label[for="blue"] {
+			color: blue;
+			padding: 10px;
+		}
+		input {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<form action="#">
+		<div>
+			<input type="checkbox" id="red">
+			<input type="checkbox" id="green">
+			<input type="checkbox" id="blue">
+
+			<label for="red">червоні</label>
+			<label for="green">зелені </label>
+			<label for="blue">сині</label>
+
+			<span class="red">червоні</span>
+			<span class="green">зелені</span>
+			<span class="green">зелені</span>
+			<span class="red">червоні</span>
+			<span class="blue">сині</span>
+			<span class="green">зелені</span>
+			<span class="red">червоні</span>
+			<span class="blue">сині</span>
+			<span class="red">червоні</span>
+			<span class="green">зелені</span>
+			<span class="blue">сині</span>
+		</div>
+	</form>
+
+</body>
+
+</html>
